@@ -1,6 +1,7 @@
 <?php // sett to the Folder, wich contains yout git repos
 
-$verzeichnis_raw = '../';
+$verzeichnis_raw = '../';	// Folder wich contains your Repos
+$refresh_interval = 300;	// Seconds to Refresh
 
 ?>
 <!DOCTYPE html>
@@ -19,6 +20,7 @@ ICjmQkhI4UFYjUokQsBDgHLaRyIUPATqB6ZIhISHgA2Ni0RoeAjckY1JxICHCC3l
 fxKx4EH4m3UoN9B231ZANHiIJAB/Eo/XofPUE+eW7I9Vshf4BQJa06NotcSOAAAA
 AElFTkSuQmCC" rel="icon" type="image/x-icon" />
 
+	<meta http-equiv="Refresh" content="<?= $refresh_interval ?>">
   <meta charset=utf-8>
   <title>gitUp</title>
 	<style>
@@ -102,7 +104,6 @@ function checkForUpdate( $folder ) {
 } 
 
 $verzeichnis_glob = glob($verzeichnis_raw . '*', GLOB_ONLYDIR );
-$fileCount = 0;    
 $total = count($verzeichnis_glob);
 
 foreach($verzeichnis_glob as $folder) {
@@ -131,7 +132,7 @@ foreach($verzeichnis_glob as $folder) {
 
 	<div class="legend left green"><div class="circle hasup"></div>need to pull</div>
 	<div class="legend left red"><div class="circle noup"></div>nothing changed</div>
-	<div class="legend right"><?= implode( "/", array_slice( explode( '/', shell_exec('pwd') ), -3, 2 ) ) ?></div>
+	<div class="legend right"><?= implode( "/", array_slice( explode( '/', shell_exec('pwd') ), -3, 2 ) ) ?> | <?= $total ?></div>
 
 </div>
 </body>
