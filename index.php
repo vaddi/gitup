@@ -131,7 +131,7 @@ foreach($verzeichnis_glob as $folder) {
 
 	<div class="legend left green"><div class="circle hasup"></div>need to pull</div>
 	<div class="legend left red"><div class="circle noup"></div>nothing changed</div>
-	<div class="legend right"><?= implode( "/", array_slice( explode( '/', shell_exec('pwd') ),-2 ) ) ?></div>
+	<div class="legend right"><?= implode( "/", array_slice( explode( '/', shell_exec('pwd') ), -3, 2 ) ) ?></div>
 
 </div>
 </body>

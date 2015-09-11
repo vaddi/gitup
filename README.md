@@ -23,7 +23,11 @@ The main function is based on a Teminal oneliner, found on [Stackoverflow][].
 
 Get last version from github.com by following command:
 
-    git clone git://github.com/vaddi/gitUp.git
+    git clone https://github.com/vaddi/gitup.git
+
+or by the git url
+
+    git clone git://github.com/vaddi/gitup.git
 
 
 ### How do I set it up? ###
