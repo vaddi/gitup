@@ -25,12 +25,10 @@ Get last version from github.com by following command:
 
     git clone git://github.com/vaddi/gitUp.git
 
-Clone it in the Folder where you have some git Projects or change the $verzeichnis_raw var at the Top of the Document to fit your needs. 
-
 
 ### How do I set it up? ###
 
-*  Open in Browser
+Clone it in the Folder where you have some git Projects or change the $verzeichnis_raw var at the Top of the Document to fit your needs. Then visit the Folder in your Favorit Browser. The Folder musst be available for your Webserver. 
 
 
 ### Issues ###
@@ -40,10 +38,11 @@ Not very performant for a lot of Files, because we need to wait for each Server 
 
 ### Credits ###
 
-1. [PHP][] php 
-2. [git][] git
-3. [sed][] sed
-4. [cut][] cut
+1. [PHP][] http://php.net/ 
+2. [git][] https://git-scm.com/
+3. [sed][] http://manpages.debian.org/cgi-bin/man.cgi?format=html&query=sed
+4. [cut][] http://manpages.debian.org/cgi-bin/man.cgi?format=html&query=cu&sektion=1
+5. [Stackoverflow][] http://stackoverflow.com/a/25109122/5208166
 
 [PHP]: http://php.net/
 [git]: https://git-scm.com/
