@@ -1,7 +1,7 @@
 <?php // sett to the Folder, wich contains yout git repos
 
 $verzeichnis_raw = '../';	// Folder wich contains your Repos
-$refresh_interval = 300;	// Seconds to Refresh
+$refresh_interval = 300;		// Seconds to Refresh
 
 ?>
 <!DOCTYPE html>
@@ -109,7 +109,8 @@ $total = count($verzeichnis_glob);
 foreach($verzeichnis_glob as $folder) {
 	
 	$lastCommit = shell_exec('git -C '.$folder.' log -1 --format="%cd"');
-	$folderName = str_replace( "/", "", $folder);
+	$folderName = str_replace( $verzeichnis_raw, "", $folder);
+//	$folderName = $folder;
 	
 	echo '<li><span>';
 	
@@ -124,6 +125,7 @@ foreach($verzeichnis_glob as $folder) {
 	echo '</li>';
 	
 }
+
 
 ?>
 
